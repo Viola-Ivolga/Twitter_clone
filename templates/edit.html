@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+
+<div class ="context">
+   <div class="main-header" >
+      <img src="/static/img/twitter.png" class="logo">
+      <h1>Edit your post</h1>
+   </div>
+  <br>
+
+    <div class="post_for">
+
+      
+      <div class = "My_icon">
+         <img class="user_img" src = "/static/img/code.jpeg" />
+         </div>
+
+         <div class = "input_area">
+
+                <form action="/edit/{{post.id}}/" method="POST" enctype="multipart/form-data" style="margin-left: 8px">
+                {% csrf_token %} 
+                <input class="editname" type="text" name="name" value="{{ post.name }}" required/>
+                <input class = "body" name="body" value="{{ post.body }}" required/>
+                {% if post.image.url %}
+
+
+               <img src="{{ post.image.url }}" class="post_img"/>
+               {% endif %}
+            <div class = "buttom_area">  
+
+                <input class="form-control form-control-sm" name="image" type="file" id="file-upload-button">
+               
+                <input class = "btn gray_btn" value="Cancel" type = "submit"/>
+                <input class = "btn blue_btn" value="Update" type = "submit"/>
+                
+            </div>
+            
+               </form>     
+                  
+         </div>     
+             
+         
+      </div>
+      <div class="ditch"></div> 
+   </div>
+   
+{% endblock %}

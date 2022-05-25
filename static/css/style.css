@@ -1,0 +1,269 @@
+/*
+Common
+
+************************/
+
+html,
+body {
+  height: 100%;
+}
+.main-header {
+  display: flex;
+}
+
+.main-header .logo {
+  width: 50px;
+  vertical-align: middle;
+  margin: 0 20px 0;
+}
+
+.main-header h1 {
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 0;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.post_form input[type="text"] {
+  background-color: #e6fef7;
+}
+.context {
+  max-width: 600px;
+  height: 0 auto;
+  margin: 0 auto;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  text-align: left;
+  display: block;
+}
+
+.context .post_form .file {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0rem;
+}
+
+/*     background-color: rgb(29, 161, 242);
+    color: white;
+    font-size: 15px;
+    font-weight: bold; */
+/*
+
+Post
+***********************/
+.posts .name_body .picture {
+  width: 100%;
+  height: 65%;
+  border-radius: 20px;
+}
+
+.post_form {
+ padding: 20px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.post_form input {
+  width: 96%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 5px;
+}
+ input.form-control {
+     width: 60%;
+     border: 1px solid darkgray;
+     padding: 0;
+     margin-bottom: 0;
+ }
+
+
+.post_form textarea {
+  width: 96%;
+  padding: 10px;
+  border: 0px;
+  border-bottom: 1px solid #ced4da;
+}
+
+.post_form .button {
+  font-family: inherit;
+  /* margin: 0; */
+  line-height: 1.5;
+  background-color: rgb(29, 161, 242);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  width: 16%;
+  height: 41px;
+  /* text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    display: inline-block;
+    border-radius: 0.25rem; */
+}
+
+#tweet {
+  border: 0;
+  padding: 7px;
+  border-radius: 10px;
+}
+.posts ul {
+  padding: 0;
+}
+
+.posts li {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 40px;
+  list-style: none;
+  position: relative;
+}
+
+.posts li .menu_icon {
+  width: 20px;
+  position: absolute;
+  right: 30px;
+  top: 18px;
+}
+
+.posts li .menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 15px;
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 3px;
+}
+.posts li .menu a {
+  text-decoration: none;
+}
+
+.posts li .logo {
+  flex-basis: 15%;
+}
+.posts li .logo img {
+  width: 80%;
+}
+.posts li .name_body {
+  flex-basis: 85%;
+}
+
+.posts li .name_body .name {
+  font-weight: bold;
+}
+
+.posts li .name_body .datetime {
+  color: gray;
+}
+
+@media screen and (max-width: 500px) {
+  .posts li .name_body .name {
+    font-size: 20px;
+  }
+}
+
+/******************************* Edit section ************************/
+
+.context .main-header {
+  padding: 10px;
+  border-bottom: 1px solid rgb(235, 238, 240);
+}
+
+.post_for .user_img {
+  height: 50px;
+}
+
+.post_for .editname {
+  border: 0px;
+  width: 100%;
+  background: #e6fef7;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.post_for .input_area .body {
+  border: 0px;
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+.post_for .input_area {
+  width: 88%;
+  padding: 5px 10px;
+  margin: 5px 10px;
+}
+
+.post_for {
+  display: flex;
+  padding: 10px;
+}
+.post_for .input_area .buttom_area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 1px solid rgb(235, 238, 240);
+  padding-top: 8px;
+}
+
+[type="file"] {
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+[type="file"]::-webkit-file-upload-button {
+  background-color: #ced4da;
+  color: #000;
+  padding: 10px 5px;
+  border: 0;
+}
+
+.post_for .buttom_area .gray_btn {
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  background-color: gray;
+}
+.post_for .buttom_area .blue_btn {
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  background-color: rgb(29, 161, 242);
+}
+
+.btn {
+  display: inline-block;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.name_body a img {
+  width: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.context .ditch {
+  height: 15px;
+  border-top: 1px solid rgb(235, 238, 240);
+  background-color: rgb(247, 248, 248);
+  border-bottom: 1px solid rgb(235, 238, 240);
+  width: auto;
+}
